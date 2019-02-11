@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+	<BOOSTDIR_INC>C:\boost_1_67_0</BOOSTDIR_INC>
+	<BOOSTDIR_LIB>C:\boost_1_67_0\lib32-msvc-12.0</BOOSTDIR_LIB>
+	<PROTOBUFDIR>$(SolutionDir)3rd\protobuf\</PROTOBUFDIR>
+	<GLOGDIR>$(SolutionDir)3rd\glog\</GLOGDIR>
+	<ZLIBDIR>$(SolutionDir)3rd\zlib\</ZLIBDIR>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(WindowsSDK_IncludePath);$(VC_IncludePath);$(SolutionDir);$(BOOSTDIR_INC);$(PROTOBUFDIR)include;$(GLOGDIR)include;$(ZLIBDIR)include</IncludePath>
+    <LibraryPath>$(WindowsSDK_LibraryPath_x86);$(VC_LibraryPath_x86);$(BOOSTDIR_LIB);$(PROTOBUFDIR)lib;$(GLOGDIR)lib;$(ZLIBDIR)lib</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+	<Link>
+	  <AdditionalDependencies>shell32.lib;libboost_system-vc120-mt-gd-x32-1_67.lib;libboost_date_time-vc120-mt-gd-x32-1_67.lib;libboost_regex-vc120-mt-gd-x32-1_67.lib;libprotobufd.lib;glogd.lib;zlibstatic.lib</AdditionalDependencies>
+	</Link>
+	<ClCompile>
+      <PreprocessorDefinitions>PROTOBUF_USE_DLLS</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+   	<Link>
+	  <AdditionalDependencies>shell32.lib;libboost_system-vc120-mt-x32-1_67.lib;libboost_date_time-vc120-mt-x32-1_67.lib;libboost_regex-vc120-mt-x32-1_67.lib;libprotobuf.lib;glog.lib;zlibstatic.lib</AdditionalDependencies>
+	</Link>
+	<ClCompile>
+      <PreprocessorDefinitions>PROTOBUF_USE_DLLS</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Connector", "connector\Connector.vcxproj", "{B12702AD-ABFB-343A-A199-8E24837244A3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "server", "server\server.vcxproj", "{9D9CAB0F-B01F-4FCD-91D0-80275C23C022}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "asio", "asio\asio.vcxproj", "{2BBC3825-C9D0-4885-9DD2-6EA6D5E9A889}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|Win32.Build.0 = Debug|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|Win32.ActiveCfg = Release|Win32
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|Win32.Build.0 = Release|Win32
+		{9D9CAB0F-B01F-4FCD-91D0-80275C23C022}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9D9CAB0F-B01F-4FCD-91D0-80275C23C022}.Debug|Win32.Build.0 = Debug|Win32
+		{9D9CAB0F-B01F-4FCD-91D0-80275C23C022}.Release|Win32.ActiveCfg = Release|Win32
+		{9D9CAB0F-B01F-4FCD-91D0-80275C23C022}.Release|Win32.Build.0 = Release|Win32
+		{2BBC3825-C9D0-4885-9DD2-6EA6D5E9A889}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2BBC3825-C9D0-4885-9DD2-6EA6D5E9A889}.Debug|Win32.Build.0 = Debug|Win32
+		{2BBC3825-C9D0-4885-9DD2-6EA6D5E9A889}.Release|Win32.ActiveCfg = Release|Win32
+		{2BBC3825-C9D0-4885-9DD2-6EA6D5E9A889}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		Qt5Version = $(DefaultQtVersion)
+	EndGlobalSection
+EndGlobal

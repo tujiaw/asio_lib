@@ -1,0 +1,62 @@
+// See README.txt for information and build instructions.
+//
+// Note: START and END tags are used in comments to define sections used in
+// tutorials.  They are not part of the syntax for Protocol Buffers.
+//
+// To get an in-depth walkthrough of this file and the related examples, see:
+// https://developers.google.com/protocol-buffers/docs/tutorials
+
+// [START declaration]
+syntax = "proto3";
+package PbBase;
+
+// [START messages]
+
+message SubscribeReq
+{
+  int32 type = 1; // 0:删除，1:增加
+  repeated string typeNameList = 2;
+}
+
+message SubscribeRsp
+{
+  int32 errorcode = 1;
+}
+
+message ServerInfoPub
+{
+  string hello = 1;
+}
+
+message HelloReq {
+  string name = 1;
+  int32 id = 2;
+  bytes address = 3;
+}
+
+message HelloRsp {
+  bytes hello = 1;
+}
+
+message EchoReq
+{
+  bytes content = 1;
+}
+
+message EchoRsp
+{
+  int32 errorcode = 1;
+  bytes content = 2;
+}
+
+message HeartbeatReq
+{
+  int32 cpu = 1;	   // 百分比
+  int32 memory = 2;	   // 百分比
+}
+
+message HeartbeatRsp
+{
+  int64 serverTime = 1;    // 服务器时间
+}
+

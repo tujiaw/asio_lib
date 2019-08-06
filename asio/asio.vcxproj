@@ -104,7 +104,6 @@
     <ClInclude Include="base\Buffer.h" />
     <ClInclude Include="base\desc.h" />
     <ClInclude Include="base\ProtoHelp.h" />
-    <ClInclude Include="base\runnable.h" />
     <ClInclude Include="base\session.h" />
     <ClInclude Include="base\TaskManager.h" />
     <ClInclude Include="base\threadpool.h" />

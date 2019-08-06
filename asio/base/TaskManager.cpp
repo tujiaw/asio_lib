@@ -1,29 +1,8 @@
 #include "TaskManager.h"
 #include <mutex>
 #include <boost/asio/io_context.hpp>
-#include "runnable.h"
 #include "threadpool.h"
 #include "session.h"
-
-class TaskRunnable : public Runnable
-{
-public:
-	TaskRunnable(const SessionPtr &sessionPtr, const PackagePtr &pacPtr, const Task &task)
-		: sessionPtr_(sessionPtr), pacPtr_(pacPtr), task_(task)
-	{}
-
-	void run()
-	{
-		if (task_) {
-			task_(sessionPtr_, pacPtr_);
-		}
-	}
-
-private:
-	SessionPtr sessionPtr_;
-	PackagePtr pacPtr_;
-	Task task_;
-};
 
 typedef std::pair<boost::asio::io_context*, boost::asio::io_context::work*> WorkContext;
 

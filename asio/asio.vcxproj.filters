@@ -59,9 +59,6 @@
     <ClInclude Include="base\ProtoHelp.h">
       <Filter>base</Filter>
     </ClInclude>
-    <ClInclude Include="base\runnable.h">
-      <Filter>base</Filter>
-    </ClInclude>
     <ClInclude Include="base\session.h">
       <Filter>base</Filter>
     </ClInclude>
